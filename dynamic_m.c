@@ -13,6 +13,14 @@ void Vvod(FILE *in, int *x, int n) {
     return;
 }
 
+void Vivod(FILE *out, int *x, int n) {
+    for (int i = 0; i < n; i++) {
+        fprintf(out, "%4i ", x[i]);
+    }
+    fprintf(out, "\n");
+    return;
+}
+
 float sr_arifm(int *x, int n) {
     int s = 0;
     for (int i = 0; i < n; i++) {
@@ -22,7 +30,7 @@ float sr_arifm(int *x, int n) {
     return sr;
 }
 
-void min_chet(FILE *out, int *x, int n) {
+int first_chet(int *x, int n) {
     int i = 0;
     int fl = 1;
 
@@ -33,20 +41,19 @@ void min_chet(FILE *out, int *x, int n) {
             i += 1;
         }
     }
+    return i;
+}
 
-    if (!fl) {
-        int Min = x[i];
-        int index = i;
-        for (int j = i + 1; j < n; j++) {
-            if (x[j] % 2 == 0 && x[j] < Min) {
-                Min = x[j];
-                index = j;
-            }
+void min_chet(FILE *out, int *x, int n, int i) {
+    int Min = x[i];
+    int index = i;
+    for (int j = i + 1; j < n; j++) {
+        if (x[j] % 2 == 0 && x[j] < Min) {
+            Min = x[j];
+            index = j;
         }
-        fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", Min, index);
-    } else {
-        fprintf(out, "Четных элементов нет\n");
     }
+    fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", Min, index);
     return;
 }
 

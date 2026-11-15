@@ -5,8 +5,10 @@
 
 void Create(int **x, int n);
 void Vvod(FILE *in, int *x, int n);
+void Vivod(FILE *out, int *x, int n);
 float sr_arifm(int *x, int n);
-void min_chet(FILE *out, int *x, int n);
+int first_chet(int *x, int n);
+void min_chet(FILE *out, int *x, int n, int i);
 void Ochistka(int **x);
 
 #endif
