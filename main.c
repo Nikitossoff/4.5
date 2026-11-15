@@ -60,73 +60,97 @@ int main()
     if (sa < 0 && sb >= 0 && sc >= 0) {
         fprintf(out, "В A среднее арифметическое отрицательно\n");
         int i_a = first_chet(A, na);
-        if (i_a < na) min_chet(out, A, na, i_a);
-        else fprintf(out, "Четных элементов нет\n");
+        if (i_a < na) {
+            int idx = min_chet(A, na, i_a);
+            fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", A[idx], idx);
+        } else fprintf(out, "Четных элементов нет\n");
     }
     else if (sb < 0 && sa >= 0 && sc >= 0) {
         fprintf(out, "В B среднее арифметическое отрицательно\n");
         int i_b = first_chet(B, nb);
-        if (i_b < nb) min_chet(out, B, nb, i_b);
-        else fprintf(out, "Четных элементов нет\n");
+        if (i_b < nb) {
+            int idx = min_chet(B, nb, i_b);
+            fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", B[idx], idx);
+        } else fprintf(out, "Четных элементов нет\n");
     }
     else if (sc < 0 && sa >= 0 && sb >= 0) {
         fprintf(out, "В C среднее арифметическое отрицательно\n");
         int i_c = first_chet(C, nc);
-        if (i_c < nc) min_chet(out, C, nc, i_c);
-        else fprintf(out, "Четных элементов нет\n");
+        if (i_c < nc) {
+            int idx = min_chet(C, nc, i_c);
+            fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", C[idx], idx);
+        } else fprintf(out, "Четных элементов нет\n");
     }
     else if (sa < 0 && sb < 0 && sc >= 0) {
         fprintf(out, "В A и B среднее арифметическое отрицательно\n");
         fprintf(out, "Массив A: ");
         int i_a = first_chet(A, na);
-        if (i_a < na) min_chet(out, A, na, i_a);
-        else fprintf(out, "Четных элементов нет\n");
+        if (i_a < na) {
+            int idx = min_chet(A, na, i_a);
+            fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", A[idx], idx);
+        } else fprintf(out, "Четных элементов нет\n");
 
         fprintf(out, "Массив B: ");
         int i_b = first_chet(B, nb);
-        if (i_b < nb) min_chet(out, B, nb, i_b);
-        else fprintf(out, "Четных элементов нет\n");
+        if (i_b < nb) {
+            int idx = min_chet(B, nb, i_b);
+            fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", B[idx], idx);
+        } else fprintf(out, "Четных элементов нет\n");
     }
     else if (sa < 0 && sc < 0 && sb >= 0) {
         fprintf(out, "В A и C среднее арифметическое отрицательно\n");
         fprintf(out, "Массив A: ");
         int i_a = first_chet(A, na);
-        if (i_a < na) min_chet(out, A, na, i_a);
-        else fprintf(out, "Четных элементов нет\n");
+        if (i_a < na) {
+            int idx = min_chet(A, na, i_a);
+            fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", A[idx], idx);
+        } else fprintf(out, "Четных элементов нет\n");
 
         fprintf(out, "Массив C: ");
         int i_c = first_chet(C, nc);
-        if (i_c < nc) min_chet(out, C, nc, i_c);
-        else fprintf(out, "Четных элементов нет\n");
+        if (i_c < nc) {
+            int idx = min_chet(C, nc, i_c);
+            fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", C[idx], idx);
+        } else fprintf(out, "Четных элементов нет\n");
     }
     else if (sb < 0 && sc < 0 && sa >= 0) {
         fprintf(out, "В B и C среднее арифметическое отрицательно\n");
         fprintf(out, "Массив B: ");
         int i_b = first_chet(B, nb);
-        if (i_b < nb) min_chet(out, B, nb, i_b);
-        else fprintf(out, "Четных элементов нет\n");
+        if (i_b < nb) {
+            int idx = min_chet(B, nb, i_b);
+            fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", B[idx], idx);
+        } else fprintf(out, "Четных элементов нет\n");
 
         fprintf(out, "Массив C: ");
         int i_c = first_chet(C, nc);
-        if (i_c < nc) min_chet(out, C, nc, i_c);
-        else fprintf(out, "Четных элементов нет\n");
+        if (i_c < nc) {
+            int idx = min_chet(C, nc, i_c);
+            fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", C[idx], idx);
+        } else fprintf(out, "Четных элементов нет\n");
     }
     else if (sa < 0 && sb < 0 && sc < 0) {
         fprintf(out, "Во всех трёх массивах среднее арифметическое отрицательно\n");
         fprintf(out, "Массив A: ");
         int i_a = first_chet(A, na);
-        if (i_a < na) min_chet(out, A, na, i_a);
-        else fprintf(out, "Четных элементов нет\n");
+        if (i_a < na) {
+            int idx = min_chet(A, na, i_a);
+            fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", A[idx], idx);
+        } else fprintf(out, "Четных элементов нет\n");
 
         fprintf(out, "Массив B: ");
         int i_b = first_chet(B, nb);
-        if (i_b < nb) min_chet(out, B, nb, i_b);
-        else fprintf(out, "Четных элементов нет\n");
+        if (i_b < nb) {
+            int idx = min_chet(B, nb, i_b);
+            fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", B[idx], idx);
+        } else fprintf(out, "Четных элементов нет\n");
 
         fprintf(out, "Массив C: ");
         int i_c = first_chet(C, nc);
-        if (i_c < nc) min_chet(out, C, nc, i_c);
-        else fprintf(out, "Четных элементов нет\n");
+        if (i_c < nc) {
+            int idx = min_chet(C, nc, i_c);
+            fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", C[idx], idx);
+        } else fprintf(out, "Четных элементов нет\n");
     }
     else {
         fprintf(out, "Ни в одном из массивов среднее арифметическое не отрицательно\n");

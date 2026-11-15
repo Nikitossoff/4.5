@@ -44,7 +44,7 @@ int first_chet(int *x, int n) {
     return i;
 }
 
-void min_chet(FILE *out, int *x, int n, int i) {
+int min_chet(int *x, int n, int i) {
     int Min = x[i];
     int index = i;
     for (int j = i + 1; j < n; j++) {
@@ -53,8 +53,7 @@ void min_chet(FILE *out, int *x, int n, int i) {
             index = j;
         }
     }
-    fprintf(out, "Минимальный четный элемент: %i (индекс %i)\n", Min, index);
-    return;
+    return index;
 }
 
 void Ochistka(int **x) {
