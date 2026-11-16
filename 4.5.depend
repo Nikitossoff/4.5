@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1794848830 source:d:\sugar\4.5\dynamic_m.c
+	"dynamic_m.h"
+	<malloc.h>
+
+1794767406 d:\sugar\4.5\dynamic_m.h
+	<stdio.h>
+
+1794848900 source:d:\sugar\4.5\main.c
+	<stdio.h>
+	<malloc.h>
+	<locale.h>
+	"dynamic_m.h"
+

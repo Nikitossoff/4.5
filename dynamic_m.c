@@ -46,14 +46,12 @@ int first_chet(int *x, int n) {
 
 int min_chet(int *x, int n, int i) {
     int Min = x[i];
-    int index = i;
     for (int j = i + 1; j < n; j++) {
         if (x[j] % 2 == 0 && x[j] < Min) {
             Min = x[j];
-            index = j;
         }
     }
-    return index;
+    return Min;
 }
 
 void Ochistka(int **x) {
